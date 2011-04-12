@@ -3,20 +3,18 @@
 class Admin_Controller extends MY_Controller
 {
 	
-	function __construct(){
+	function __construct() {
 		parent::__construct();
 		
+        $this->lang->load('admin');
 		// logic for template
-		$this->template->set_theme('default')
-			->set_layout('default')
-			->set_partial('metadata','metadata')
-			->set_partial('header','header')
-			->set_partial('footer','footer');
-			
-		//set the theme for asset
-		$this->asset->set_theme('default');
-		
-		//admin logic go here
+	    $this->template->set_layout('default', 'admin');
+		$this->template
+			->set_partial('header', 'admin/partials/header')
+			->set_partial('metadata', 'admin/partials/metadata')
+			->set_partial('menu', 'admin/partials/menu')
+			->set_partial('aside', 'admin/partials/aside')
+			->set_partial('footer', 'admin/partials/footer');
 	}
 	
 }

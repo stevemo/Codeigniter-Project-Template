@@ -57,6 +57,6 @@ $config['theme_asset_url'] = config_item('base_url').APPPATH.'themes/';
 |	/assets/
 |
 */
-$config['asset_img_dir'] = 'img';
+$config['asset_img_dir'] = 'images';
 $config['asset_js_dir'] = 'js';
 $config['asset_css_dir'] = 'css';
